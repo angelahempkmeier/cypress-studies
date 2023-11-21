@@ -7,7 +7,8 @@ describe('register page', () => {
 
   it('the name is completed and it\'s not empty', () => {
     cy.visit('http://127.0.0.1:5500/');
-    cy.get('#name').should('exist').and('not.be.empty');
+    cy.wait(4000);
+    cy.get('#name').should('exist').and('have.value', 'angela');
 
   });
 })
